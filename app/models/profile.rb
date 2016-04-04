@@ -1,12 +1,11 @@
 class Profile < ActiveRecord::Base
   belongs_to :user
 
-   validate :first_last_name_not_null_both, 
+  validate :first_last_name_not_null_both, 
    :first_name_not_sue
   validates :gender, inclusion: %w(male female)
 
-
-  def first_last_name_not_null_both
+	def first_last_name_not_null_both
 		if last_name == nil && first_name == nil
 			errors.add(:first_name, "first_name	or	last_name	to	be	null	but	not	both")
 		end

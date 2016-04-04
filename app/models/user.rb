@@ -9,5 +9,4 @@ class User < ActiveRecord::Base
 		todo_items.where(completed: true).count(:completed)
 	end
 
-	
 end
