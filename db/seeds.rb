@@ -9,10 +9,10 @@ User.destroy_all
 Profile.destroy_all
 
 User.create! [
-	{ username: "Fiorina", password_digest: 1343 },
-	{ username: "Trump", password_digest: 13543 },
-	{ username: "Carson", password_digest: 1323 },
-	{ username: "Clinton", password_digest: 51343 }
+  { username: "Fiorina", password_digest: 1343 },
+  { username: "Trump", password_digest: 13543 },
+  { username: "Carson", password_digest: 1323 },
+  { username: "Clinton", password_digest: 51343 }
 ]
 
 User.find_by!(username: "Fiorina").create_profile(gender: "female", birth_year: 1954, first_name: "Carly", last_name: "Fiorina")
